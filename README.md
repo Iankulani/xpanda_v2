@@ -158,4 +158,217 @@ docker-compose logs -f
 # Stop
 docker-compose down
 
+# Start xPanda-V2
+./xpanda
+
+# Or
+python3 xpanda_v2.py
+
+# Show help
+🐼> help
+
+# Run a ping
+🐼> ping 127.0.0.1
+
+# Run nmap scan
+🐼> nmap_quick 192.168.1.1
+
+# Generate traffic
+🐼> traffic icmp 192.168.1.1 10
+
+# Start keylogger (F10 to stop)
+🐼> keylogger_start
+
+# Web dashboard
+# Open http://localhost:5000
+
+
+# 📚 Commands
+
+Network Commands
+
+Command	Description
+ping <target>	Ping a target
+nmap_quick <target>	Quick port scan
+nmap_full <target>	Full port scan
+traceroute <target>	Trace network path
+whois <domain>	WHOIS lookup
+dns <domain>	DNS lookup
+location <ip>	IP geolocation
+Security Commands
+Command	Description
+nikto <target>	Web vulnerability scan
+dos_syn <ip> <port> <duration>	SYN flood attack
+crack <type> <hash>	Password cracking
+arp_spoof <target> <gateway>	ARP spoofing
+mac_info <mac>	MAC address info
+nat_info	NAT information
+Social Engineering
+Command	Description
+phish_facebook	Facebook phishing page
+phish_gmail	Gmail phishing page
+phish_start <id>	Start phishing server
+phish_creds	View captured credentials
+Platform Commands
+Command	Description
+platform_send <platform> <cmd>	Send command to platform
+platform_status	Show platform status
+agent_register <name> <ip>	Register agent
+System Commands
+Command	Description
+status	System status
+history	Command history
+system	System information
+threats	Recent threats
+report	Security report
+help	Help menu
+
+
+
+⚙️ Configuration
+Configuration is stored in ~/.xpanda/config.json:
+
+json
+{
+  "version": "2.0.0",
+  "auto_start": false,
+  "web": {
+    "enabled": true,
+    "port": 5000,
+    "host": "0.0.0.0"
+  },
+  "keylogger": {
+    "enabled": false,
+    "hotkey": "f10",
+    "upload_interval": 30
+  },
+  "discord": {
+    "enabled": false,
+    "token": "",
+    "prefix": "!"
+  },
+  "telegram": {
+    "enabled": false,
+    "bot_token": "",
+    "prefix": "/"
+  }
+}
+🤖 Platform Integrations
+Discord
+Create a bot at https://discord.com/developers
+
+Get your bot token
+
+Configure in xPanda-V2:
+
+text
+🐼> platform_send discord "ping 8.8.8.8"
+Telegram
+Talk to @BotFather on Telegram
+
+Create a new bot and get the token
+
+Configure in xPanda-V2
+
+Slack
+Create a Slack app at https://api.slack.com/apps
+
+Get your bot token
+
+Configure in xPanda-V2
+
+🐳 Docker Deployment
+Production Deployment
+yaml
+# docker-compose.prod.yml
+version: '3.8'
+services:
+  xpanda:
+    image: xpanda-v2:2.0.0
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_ADMIN
+    volumes:
+      - xpanda_data:/home/xpanda/.xpanda
+    restart: always
+volumes:
+  xpanda_data:
+bash
+docker-compose -f docker-compose.prod.yml up -d
+🔄 CI/CD
+The project uses GitLab CI/CD with the following stages:
+
+Validate - Lint Python, YAML, Dockerfile
+
+Test - Unit tests, dependency checks, security scans
+
+Build - Docker image build
+
+Security - Trivy, Grype vulnerability scans
+
+Deploy - Staging and production deployment
+
+Environment Variables
+Variable	Description
+CI_REGISTRY_USER	Docker registry username
+CI_REGISTRY_PASSWORD	Docker registry password
+SSH_PRIVATE_KEY	SSH private key for deployment
+STAGING_HOST	Staging server hostname
+PRODUCTION_HOST	Production server hostname
+🔧 Troubleshooting
+Common Issues
+1. Permission denied on raw sockets
+
+bash
+# Run with sudo
+sudo python3 xpanda_v2.py
+2. Missing system tools
+
+bash
+# Ubuntu/Debian
+sudo apt-get install nmap curl wget netcat-openbsd dnsutils traceroute openssh-client docker.io git nikto hashcat iptables macchanger hping3 tcpdump openssl
+
+# macOS
+brew install nmap curl wget netcat bind traceroute openssh docker git nikto hashcat tcpdump openssl
+3. Python package errors
+
+bash
+# Reinstall dependencies
+pip install --force-reinstall -r requirements.txt
+4. Docker permission issues
+
+bash
+# Add user to docker group
+sudo usermod -aG docker $USER
+newgrp docker
+5. Web dashboard not accessible
+
+bash
+# Check firewall
+sudo ufw allow 5000
+# Or
+sudo iptables -A INPUT -p tcp --dport 5000 -j ACCEPT
+Getting Help
+bash
+# Check dependencies
+python3 requirements-check.py
+
+# View logs
+tail -f ~/.xpanda/xpanda.log
+
+# Run in debug mode
+XPANDA_DEBUG=1 python3 xpanda_v2.py
+
+
+
+
+
+
+
+
+
+
+
 
