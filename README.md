@@ -3,6 +3,16 @@
 
 <img width="360" height="360" alt="147d1ebd-9080-4fa8-b4ac-83a9356b3c8d" src="https://github.com/user-attachments/assets/742e103a-7a0b-4ef8-a5b3-337ecfbfd00c" />
 
+[![GitHub stars](https://img.shields.io/github/stars/Iankulani/xpanda_v2?style=for-the-badge&logo=github)](https://github.com/Iankulani/xpanda_v2/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Iankulani/xpanda_v2?style=for-the-badge&logo=github)](https://github.com/Iankulani/xpanda_v2/network)
+[![GitHub watchers](https://img.shields.io/github/watchers/Iankulani/xpanda_v2?style=for-the-badge&logo=github)](https://github.com/Iankulani/xpanda_v2/watchers)
+[![GitHub contributors](https://img.shields.io/github/contributors/Iankulani/xpanda_v2?style=for-the-badge&logo=github)](https://github.com/Iankulani/xpanda_v2/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Iankulani/xpanda_v2?style=for-the-badge&logo=git)](https://github.com/Iankulani/xpanda_v2/commits/main)
+[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-blue?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/Iankulani/xpanda_v2)
+[![Python](https://img.shields.io/badge/python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+
+
 
 Xpanda
 
