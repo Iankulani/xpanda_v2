@@ -1,5 +1,9 @@
 # xpanda_v2
 
+
+<img width="360" height="360" alt="147d1ebd-9080-4fa8-b4ac-83a9356b3c8d" src="https://github.com/user-attachments/assets/742e103a-7a0b-4ef8-a5b3-337ecfbfd00c" />
+
+
 Xpanda
 
 
