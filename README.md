@@ -3,7 +3,7 @@
 <div align="center">
 
 
-<img width="360" height="360" alt="147d1ebd-9080-4fa8-b4ac-83a9356b3c8d" src="https://github.com/user-attachments/assets/742e103a-7a0b-4ef8-a5b3-337ecfbfd00c" />
+<img width="360" height="360" alt="xPanda1" src="https://github.com/user-attachments/assets/83be9338-980f-44c4-8ae3-627fac69b33b" />
 
 [![GitHub stars](https://img.shields.io/github/stars/Iankulani/xpanda_v2?style=for-the-badge&logo=github)](https://github.com/Iankulani/xpanda_v2/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Iankulani/xpanda_v2?style=for-the-badge&logo=github)](https://github.com/Iankulani/xpanda_v2/network)
