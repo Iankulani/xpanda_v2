@@ -357,7 +357,9 @@ tail -f ~/.xpanda/xpanda.log
 XPANDA_DEBUG=1 python3 xpanda_v2.py
 
 
+# Star History
 
+[![Star History Chart](https://api.star-history.com/svg?repos=Iankulani/xpanda_v2&type=Date)](https://star-history.com/#Iankulani/xpanda_v2&Date)
 
 
 
